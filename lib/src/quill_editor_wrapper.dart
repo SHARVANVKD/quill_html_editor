@@ -1,4 +1,3 @@
-
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -140,8 +139,8 @@ class QuillHtmlEditorState extends State<QuillHtmlEditor> {
 
   @override
   initState() {
-    _loadScripts = rootBundle.loadString(
-        'packages/quill_html_editor/assets/scripts/quill_2.0.0_4_min.js');
+    _loadScripts =
+        rootBundle.loadString('lib/assets/scripts/quill_2.0.0_4_min.js');
     _fontFamily = widget.textStyle?.fontFamily ?? 'Roboto';
     _encodedStyle = Uri.encodeFull(_fontFamily);
     isEnabled = widget.isEnabled;
