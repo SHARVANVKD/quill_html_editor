@@ -86,10 +86,19 @@ class _InputUrlWidgetState extends State<InputUrlWidget> {
         onTap: () async {
           await widget.controller.getSelectionRange().then((selectionModel) {
             showModalBottomSheet(
+                enableDrag: false,
+                isScrollControlled: true,
                 context: context,
                 builder: (context) {
-                  return _getTextFieldBytType(false, onDoneLastClicked,
-                      onCloseLastClicked, selectionModel, context);
+                  return SingleChildScrollView(
+                    child: Padding(
+                      padding: EdgeInsets.only(
+                        bottom: MediaQuery.of(context).viewInsets.bottom,
+                      ),
+                      child: _getTextFieldBytType(false, onDoneLastClicked,
+                          onCloseLastClicked, selectionModel, context),
+                    ),
+                  );
                 });
           });
         },
