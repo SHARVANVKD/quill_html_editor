@@ -181,8 +181,8 @@ class _EditTableDropDownState extends State<EditTableDropDown> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Row(
-                      children: [
+                    Row(
+                      children: const [
                         Expanded(
                           child: Padding(
                             padding: EdgeInsets.only(left: 8.0),
